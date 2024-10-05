@@ -1,8 +1,9 @@
+const config = require('../config.json');
+const { config: { port } } = config;
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const app = express();
-const port = 80;
 
 const home = require('./routes/home');
 
