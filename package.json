@@ -1,0 +1,28 @@
+{
+  "name": "retendo-website",
+  "version": "1.0.0",
+  "description": "Official website for Retendo Network",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RetendoNetwork/website.git"
+  },
+  "author": "cedkeChat, lurio28",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RetendoNetwork/website/issues"
+  },
+  "homepage": "https://github.com/RetendoNetwork/website#readme",
+  "dependencies": {
+    "express": "^4.21.0",
+    "express-handlebars": "^8.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "keywords": []
+}
