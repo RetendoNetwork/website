@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Retendo</title>
+    <link rel="stylesheet" href="/css/account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMG9UuPlu0SU+2nv5qK2V3Nz56azkn5xjsaN8R" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+        <h1>Register</h1>
+        </header>
+        <form class="account register" id="signupForm" action="/inscription" method="POST">
+            <div class="input-wrapper full-width">
+                <i class="fas fa-envelope"></i>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <label for="pseudo">Username</label>
+                <input type="text" id="rnid" name="rnid" required>
+                <span class="error-message" id="pseudoError"></span>
+            </div>
+            <div class="input-wrapper">
+                <i class="fas fa-user-tag"></i>
+                <label for="miiname">Mii Name</label>
+                <input type="text" id="miiname" name="miiname" required>
+                <span class="error-message" id="MiinameError"></span>
+            </div>
+            <div class="input-wrapper">
+                <i class="fas fa-lock"></i>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error-message" id="passwordError"></span>
+            </div>
+            <div class="input-wrapper">
+                <i class="fas fa-lock"></i>
+                <label for="confirmMotDePasse">Confirm password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+                <span class="error-message" id="confirmPasswordError"></span>
+            </div>
+            <div class="full-width">
+                <button type="submit" id="submitBtn">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

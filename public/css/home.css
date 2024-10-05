@@ -1,0 +1,68 @@
+:root {
+    --bg--red: #db1c1c;
+    --bg--blue: #003cff;
+    --bg--dark: #221122;
+    --bg--black: #111111;
+    --bg--dark-red: #701111;
+}
+
+body {
+    margin: 0;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, var(--bg--red), var(--bg--dark));
+    color: var(--bg--black);
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.image-3ds {
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
+}
+
+.explanation {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+footer {
+    background: var(--bg--dark);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+}

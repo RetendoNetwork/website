@@ -1,0 +1,175 @@
+:root {
+    --bg-shade-1: #1c1c1c;
+    --bg-shade-2: #2e2e2e;
+    --text-shade-1: #f0f0f0;
+    --text-shade-3: #cccccc;
+    --accent-shade-0: #942828;
+    --accent-shade-1: #c55e5e;
+    --red-shade-1: #e53e3e;
+    --green-shade-0: #38a169;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --gradient-color: linear-gradient(45deg, #e54646, #c52a2a);
+}
+
+body {
+    background: var(--bg-shade-1);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    box-shadow: 0 8px 30px var(--shadow-color);
+    border-radius: 16px;
+    background: var(--bg-shade-2);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-shade-1);
+}
+
+form.account {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 20px;
+}
+
+form.account label {
+    display: block;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--text-shade-1);
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+form.account .input-wrapper {
+    position: relative;
+}
+
+form.account input {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    transition: border 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+form.account input:focus {
+    border-color: var(--accent-shade-0);
+    outline: none;
+    transform: scale(1.02);
+}
+
+form.account input:focus + label {
+    color: var(--accent-shade-0);
+}
+
+form.account .input-wrapper i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-shade-3);
+}
+
+form.account button {
+    padding: 14px;
+    background: var(--gradient-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+}
+
+form.account button:active {
+    transform: scale(0.98);
+}
+
+form.account button.loading {
+    cursor: not-allowed;
+    position: relative;
+}
+
+form.account button.loading:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-top-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.error-message {
+    color: var(--red-shade-1);
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.success-message {
+    color: var(--green-shade-0);
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+@media screen and (min-width: 720px) {
+    form.account {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .full-width {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    form.account {
+        grid-template-columns: 1fr;
+    }
+}

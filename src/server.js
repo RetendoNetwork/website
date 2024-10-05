@@ -1,20 +1,23 @@
-const config = require('../config.json');
-const { config: { port } } = config;
 const express = require('express');
 const exphbs = require('express-handlebars');
+const config = require('../config.json');
+const { config: { port } } = config;
 const path = require('path');
-const app = express();
 
+const server = express();
+
+const account = require('./routes/account');
 const home = require('./routes/home');
 
-app.engine('handlebars', exphbs.engine());
-app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, '..', 'views'));
+server.use(express.static(path.join(__dirname, '..', 'public')));
 
-app.use(express.static(path.join(__dirname, 'public')));
+server.engine('handlebars', exphbs.engine());
+server.set('view engine', 'handlebars');
+server.set('views', path.join(__dirname, '..', 'views'));
 
-app.use(home);
+server.use(account);
+server.use(home);
 
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(`The server was started on http://localhost:${port}`);
 });

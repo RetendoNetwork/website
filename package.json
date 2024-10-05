@@ -2,7 +2,7 @@
   "name": "retendo-website",
   "version": "1.0.0",
   "description": "Official website for Retendo Network",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/server.js"
@@ -19,7 +19,9 @@
   "homepage": "https://github.com/RetendoNetwork/website#readme",
   "dependencies": {
     "express": "^4.21.0",
-    "express-handlebars": "^8.0.1"
+    "express-handlebars": "^8.0.1",
+    "node-sass-middleware": "^1.1.0",
+    "sass": "^1.79.4"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
