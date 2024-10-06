@@ -153,3 +153,41 @@ h1 span {
   font-size: 20px;
   font-weight: bold;
 }
+
+footer {
+  background-color: #2c2c2c;
+  padding: 20px 0;
+  color: #ffffff;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left p, .footer-right nav a {
+  margin: 0;
+  font-size: 14px;
+  border: 2px solid #ff5555;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.footer-right nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-right nav a:hover {
+  color: #ff5555;
+}
