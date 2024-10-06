@@ -8,6 +8,7 @@ const server = express();
 
 const account = require('./routes/account');
 const home = require('./routes/home');
+const progress = require('./routes/progress');
 
 server.use(express.static(path.join(__dirname, '..', 'public')));
 
@@ -17,6 +18,7 @@ server.set('views', path.join(__dirname, '..', 'views'));
 
 server.use(account);
 server.use(home);
+server.use(progress);
 
 server.listen(port, () => {
     console.log(`The server was started on http://localhost:${port}`);
