@@ -1,6 +1,7 @@
 {
     "config": {
-        "port": 80
+        "port": 80,
+        "url": "retendo.online"
     },
 
     "db": {
