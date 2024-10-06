@@ -1,5 +1,5 @@
-const colors = require("colors");
-const moment = require("moment");
+const colors = require('colors');
+const moment = require('moment');
 
 const logger = {
     log: function log(msg) {

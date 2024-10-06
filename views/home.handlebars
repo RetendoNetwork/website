@@ -11,9 +11,9 @@
         <a class="logo" href="/">Retendo Network</a>
         <nav>
             <ul>
-                <li><a href="#">Updates</a></li>
-                <li><a href="#">Documentations</a></li>
-                <li><a href="/progress">Progress</a></li>
+                <li><a href="/updates">Updates</a></li>
+                <li><a href="/docs">Documentations</a></li>
+                <li><a href="/progress">Progress</a></li>  
             </ul>
         </nav>
     </header>
@@ -94,5 +94,25 @@
             </div>
         </div>
     </footer>
+    <script>
+      function createSnowflake() {
+          const snowflake = document.createElement('div');
+          snowflake.classList.add('snowflake');
+          snowflake.innerHTML = '❄';
+
+          snowflake.style.left = Math.random() * window.innerWidth + 'px';
+          snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+          snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
+          snowflake.style.opacity = Math.random();
+
+          document.body.appendChild(snowflake);
+
+          setTimeout(() => {
+              snowflake.remove();
+          }, parseInt(snowflake.style.animationDuration) * 1000);
+      }
+
+      setInterval(createSnowflake, 200);
+    </script>
 </body>
 </html>

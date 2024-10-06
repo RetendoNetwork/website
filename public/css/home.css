@@ -191,3 +191,27 @@ footer {
 .footer-right nav a:hover {
   color: #ff5555;
 }
+
+.user_icon {
+  color: var(--text-shade-1);
+  text-decoration: none;
+  display: block;
+  height: 32px;
+  transition: color 150ms;
+}
+
+.snowflake {
+  position: absolute;
+  top: -50px;
+  color: white;
+  font-size: 10px;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(100vh);
+  }
+}
