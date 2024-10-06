@@ -26,8 +26,17 @@
             <a class="redhover" href="https://discord.gg/QB5YFJfsFJ">Discord</a>
             <a class="redhover" href="https://github.com/RetendoNetwork">GitHub</a>
             <a class="redhover" href="https://github.com/InnoverseTeam">❤️</a>
-        </div>
-        <img src="/img/3ds.png" alt="3DS" class="console">
+        </div>  
+        <canvas id="myCanvas" width="500" height="500"></canvas>
+        <script>
+        const canvas = document.getElementById('myCanvas');
+        const context = canvas.getContext('2d');
+        const img = new Image();
+        img.src = '/img/3ds.png';
+        img.onload = function() {
+            context.drawImage(img, 0, 0);
+        };
+    </script>
     </main>
 
     <main>
