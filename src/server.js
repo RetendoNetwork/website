@@ -1,6 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const config = require('../config.json');
+const logger = require('./logger');
 const { config: { port } } = config;
 const path = require('path');
 
@@ -21,5 +22,5 @@ server.use(home);
 server.use(progress);
 
 server.listen(port, () => {
-    console.log(`The server was started on http://localhost:${port}`);
+    logger.log(`The server was started on http://localhost:${port}`);
 });
