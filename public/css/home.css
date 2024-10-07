@@ -9,9 +9,31 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
-  background-color: #ff5555;
+  box-shadow: 0 2px 10px rgb(0 0 0);
 }
+
+header img {
+  width: auto;
+  height: 60px;
+  box-shadow: 0 2px 10px rgb(0 0 0);
+  border-radius: 30px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+  position: absolute;
+  top: 50px;
+  left: 67px;
+  border-bottom: solid #fd0002;
+  border-bottom-style: ridge;
+  border-bottom-left-radius: 5px; 
+}
+
 
 .logo {
   font-size: 40px;
@@ -23,15 +45,56 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
 nav a {
   color: #ffffff;
   text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
 nav a:hover { 
-  color: #6b4040;
+  transition: background-color 0.3s;
+  background-color: #00000030;
+  box-shadow: 0 2px 10px rgb(0 0 0);
+}
+
+nav ul li.profile {
+  margin-left: 40px;
+}
+
+nav ul li.profile a {
+  padding: 5px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li.profile a:hover {
+  background-color: transparent;
+  transform: scale(1.1);
+}
+
+nav ul li.profile a .profile-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(90%) hue-rotate(150deg) brightness(90%);
+}
+
+
+nav ul li.profile a:hover .profile-icon {
+  opacity: 0.9;
 }
 
 .don {
@@ -53,21 +116,11 @@ a {
   text-decoration: none;
 }
 
-.redhover:hover {
-  color: #ff5555;
-}
-
 h1 span {
   color: #ff5555;
 }
 
 .btn {
-  background-color: #ff5555;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #ffffff;
-  margin-top: 20px;
   display: inline-block;
 }
 
@@ -76,8 +129,25 @@ h1 span {
 }
 
 .social a {
-  margin: 0 10px;
+  margin: 0 5px;
   color: #ffffff;
+  padding: 20px 20px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.social .btn {
+  padding: 18px 50px;
+  background-color: #673db6;
+  font-weight: bold;
+}
+
+.social .btn:hover {
+  background-color: #9d6ff3;
+}
+
+.social .redhover:hover {
+  background-color : #494f81;
 }
 
 .console {
@@ -210,8 +280,10 @@ footer {
   animation: fall linear infinite;
 }
 
+
 @keyframes fall {
   to {
       transform: translateY(100vh);
   }
 }
+

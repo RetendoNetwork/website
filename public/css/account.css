@@ -56,6 +56,16 @@ form.account {
     padding: 20px;
 }
 
+.login {
+    text-decoration: none;
+    display: block;
+    color: #ffb700;
+    text-align: inherit;
+    width: fit-content;
+    margin: auto;
+    margin-top: 18px;
+}
+
 form.account label {
     display: block;
     margin-bottom: 6px;

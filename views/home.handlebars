@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Retendo Network</title>
     <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <header>
-        <a class="logo" href="/">Retendo Network</a>
-        <nav>
-            <ul>
-                <li><a href="/updates">Updates</a></li>
-                <li><a href="/docs">Documentations</a></li>
-                <li><a href="/progress">Progress</a></li>  
-            </ul>
-        </nav>
-    </header>
+<header>
+    <a class="logo" href="/">
+        <img src="/img/Retendo.png" alt="Retendo Network" />
+        <span class="logo-text">etendo network</span>
+    </a>
+    <nav>
+        <ul>
+            <li><a href="/updates">Updates</a></li>
+            <li><a href="/docs">Documentations</a></li>
+            <li><a href="/progress">Progress</a></li>  
+            <li class="profile">
+                <a href="/account/register">
+                    <img src="https://static.thenounproject.com/png/1122812-200.png" alt="Profile Icon" class="profile-icon"/> <!-- Image de l'icône de profil -->
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+
 
     <main>
         <h1>Online service<br><span>Recreated.</span></h1>
         <p>Retendo Network is a recreation of online service for <span style="color: #ff5555">Nintendo 2DS/3DS</span> and for <span style="color: #ff5555">Nintendo Wii U</span>.</p>
-        <a href="#" class="btn">Read more</a>
+        
         <div class="social">
-            <a class="redhover" href="https://discord.gg/QB5YFJfsFJ">Discord</a>
-            <a class="redhover" href="https://github.com/RetendoNetwork">GitHub</a>
-            <a class="redhover" href="https://github.com/InnoverseTeam">❤️</a>
+            <a href="#" class="btn">Read more</a>
+            <a class="redhover" href="https://discord.gg/QB5YFJfsFJ"><i class="fa-brands fa-discord"></i></a>
+            <a class="redhover" href="https://github.com/RetendoNetwork"><i class="fa-brands fa-github"></i></a>
+            <a class="redhover" href="https://github.com/InnoverseTeam"><i class="fa-sharp fa-solid fa-heart"></i></a>
         </div>  
         <canvas id="myCanvas" width="500" height="500"></canvas>
         <script>
