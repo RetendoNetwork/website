@@ -9,9 +9,9 @@ const path = require('path');
 const server = express();
 
 const routes = {
-    account: require('./routes/account'),
-    home: require('./routes/home'),
-    progress: require('./routes/progress')
+    account: require('./routes/pages/account'),
+    home: require('./routes/pages/home'),
+    progress: require('./routes/pages/progress')
 };
 
 server.use(express.static(path.join(__dirname, '..', 'public')));
