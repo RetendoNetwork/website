@@ -1,7 +1,8 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-    commit_message="updated website"
+    echo "Please enter a commit message : "
+    read commit_message
 else
     commit_message="$1"
 fi
