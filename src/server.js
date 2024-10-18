@@ -1,6 +1,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-const config = require('../config.json');
+const config = require('../website-config.json');
 const logger = require('./logger');
 const { config: { port } } = config;
 const { config: { url } } = config;
