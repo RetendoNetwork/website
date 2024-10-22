@@ -18,10 +18,11 @@
   },
   "homepage": "https://github.com/RetendoNetwork/website#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "express": "^4.21.0",
     "express-handlebars": "^8.0.1",
     "moment": "^2.30.1",
-    "colors": "^1.4.0"
+    "mongoose": "^8.7.2"
   },
   "keywords": []
 }
