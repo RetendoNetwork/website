@@ -15,6 +15,10 @@ const routes = {
     progress: require('./routes/progress')
 };
 
+app.use(express.urlencoded({
+    extended: true
+}));
+
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.engine('handlebars', exphbs.engine());
