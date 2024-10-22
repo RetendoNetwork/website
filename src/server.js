@@ -3,6 +3,7 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const database = require('./database');
 const logger = require('./logger');
+const utils = require('./utils');
 const config = require('../website-config.json');
 const { config: { port } } = config;
 
@@ -24,6 +25,13 @@ logger.info(`Applying routes.`);
 app.use(routes.account);
 app.use(routes.home);
 app.use(routes.progress);
+
+app.use((req, res) => {
+    const fullUrl = utils.fullUrl(req);
+    res.render('404', {
+        layout: false
+    });
+});
 
 logger.info('Starting server.');
 database.connect().then(() => {
