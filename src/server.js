@@ -1,30 +1,33 @@
 const express = require('express');
-const exphbs = require('express-handlebars');
-const config = require('../website-config.json');
-const logger = require('./logger');
-const { config: { port } } = config;
-const { config: { url } } = config;
 const path = require('path');
+const exphbs = require('express-handlebars');
+const database = require('./database');
+const logger = require('./logger');
+const config = require('../website-config.json');
+const { config: { port } } = config;
 
-const server = express();
+const app = express();
 
 const routes = {
-    account: require('./routes/pages/account'),
-    home: require('./routes/pages/home'),
-    progress: require('./routes/pages/progress')
+    account: require('./routes/account'),
+    home: require('./routes/home'),
+    progress: require('./routes/progress')
 };
 
-server.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
-server.engine('handlebars', exphbs.engine());
-server.set('view engine', 'handlebars');
-server.set('views', path.join(__dirname, '..', 'views'));
+app.engine('handlebars', exphbs.engine());
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, '..', 'views'));
 
 logger.info(`Applying routes.`);
-server.use(routes.account);
-server.use(routes.home);
-server.use(routes.progress);
+app.use(routes.account);
+app.use(routes.home);
+app.use(routes.progress);
 
-server.listen(port, () => {
-    logger.log(`The server was started on https://${url}:${port}`);
+logger.info('Starting server..');
+database.connect().then(() => {
+    app.listen(port, async () => {
+        logger.success(`Server listening on http://localhost:${port}`);
+    });
 });
