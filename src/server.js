@@ -25,9 +25,9 @@ app.use(routes.account);
 app.use(routes.home);
 app.use(routes.progress);
 
-logger.info('Starting server..');
+logger.info('Starting server.');
 database.connect().then(() => {
-    app.listen(port, async () => {
-        logger.success(`Server listening on http://localhost:${port}`);
+    app.listen(port, () => {
+        logger.log(`Server listening on http://localhost:${port}`);
     });
 });
