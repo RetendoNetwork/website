@@ -33,9 +33,9 @@ const routes = {
 };
 
 //app.use(routes.account);
-//app.use(routes.blog);
-app.use('/', routes.home);
-//app.use(routes.progress);
+app.use(routes.blog);
+app.use(routes.home);
+app.use(routes.progress);
 
 database.connect().then(() => {
 	app.listen(port, async () => {
