@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/account.css" />
+<div class="wrapper">
+    <header>
+        <h1>Register</h1>
+    </header>
+    <form class="account register" id="signupForm" action="/account/register" method="POST">
+        <div class="input-wrapper full-width">
+            <i class="fas fa-envelope"></i>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="emailError"></span>
+        </div>
+        <div class="input-wrapper">
+            <i class="fas fa-user"></i>
+            <label for="pseudo">Username</label>
+            <input type="text" id="username" name="username" required>
+            <span class="error-message" id="pseudoError"></span>
+        </div>
+        <div class="input-wrapper">
+            <i class="fas fa-user-tag"></i>
+            <label for="miiname">Mii Name</label>
+            <input type="text" id="miiname" name="miiname" required>
+            <span class="error-message" id="MiinameError"></span>
+        </div>
+        <div class="input-wrapper">
+            <i class="fas fa-lock"></i>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <span class="error-message" id="passwordError"></span>
+        </div>
+        <div class="full-width">
+            <button type="submit" id="submitBtn">Register</button>
+            <a href="/account/login" class="login">Already have an account ?</a>
+        </div>
+    </form>
+</div>

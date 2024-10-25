@@ -29,13 +29,15 @@ const routes = {
     account: require('./routes/account'),
     blog: require('./routes/blog'),
     home: require('./routes/home'),
-    progress: require('./routes/progress')
+    progress: require('./routes/progress'),
+    updates: require('./routes/updates')
 };
 
-//app.use(routes.account);
+app.use(routes.account);
 app.use(routes.blog);
 app.use(routes.home);
 app.use(routes.progress);
+app.use(routes.updates);
 
 database.connect().then(() => {
 	app.listen(port, async () => {
