@@ -1,7 +1,7 @@
 const got = require('got');
 const logger = require('./logger');
 const express = require('express');
-const config = require('../website-config.json');
+const config = require('../config.json');
 
 function fullUrl(req) {
     return `${req.protocol}://${req.hostname}${req.originalUrl}`;

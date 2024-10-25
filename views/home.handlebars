@@ -1,48 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+{{> header}}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/img/icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Retendo Network</title>
-    <link rel="stylesheet" href="/css/home.css">
-</head>
-
-<body>
-    <header>
-        <a class="logo" href="/">
-            <img src="/img/Retendo.png" alt="Retendo Network" />
-            <span class="logo-text">etendo network</span>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="/updates">Updates</a></li>
-                <li><a href="/docs">Documentations</a></li>
-                <li><a href="/progress">Progress</a></li>
-                <li class="profile">
-                    <a href="/account/register">
-                        <img src="https://static.thenounproject.com/png/1122812-200.png" alt="Profile Icon"
-                            class="profile-icon" />
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <h1>Online service<br><span>Recreated.</span></h1>
-        <p>Retendo Network is a recreation of online service for <span style="color: #ff5555">Nintendo 2DS/3DS</span>
-            and for <span style="color: #ff5555">Nintendo Wii U</span>.</p>
-
-        <div class="social">
-            <a href="#" class="btn">Read more</a>
-            <a class="redhover" href="https://discord.gg/QB5YFJfsFJ"><i class="fa-brands fa-discord"></i></a>
-            <a class="redhover" href="https://github.com/RetendoNetwork"><i class="fa-brands fa-github"></i></a>
-            <a class="redhover" href="https://github.com/InnoverseTeam"><i class="fa-sharp fa-solid fa-heart"></i></a>
-        </div>
-        <canvas id="myCanvas" width="500" height="500"></canvas>
+<main>
+    <h1>Online service<br><span>Recreated.</span></h1>
+    <p>Retendo Network is a recreation of online service for <span style="color: #ff5555">Nintendo 2DS/3DS</span>and for <span style="color: #ff5555">Nintendo Wii U</span>.</p>
+    <div class="social">
+        <a href="#" class="btn">Read more</a>
+        <a class="redhover" href="https://discord.gg/QB5YFJfsFJ"><i class="fa-brands fa-discord"></i></a>
+        <a class="redhover" href="https://github.com/RetendoNetwork"><i class="fa-brands fa-github"></i></a>
+        <a class="redhover" href="https://github.com/InnoverseTeam"><i class="fa-sharp fa-solid fa-heart"></i></a>
+    </div>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
         <script>
             const canvas = document.getElementById('myCanvas');
             const context = canvas.getContext('2d');
@@ -53,7 +20,6 @@
             };
         </script>
     </main>
-
     <main>
         <h1>What we do ?</h1>
         <div class="cards-container">
@@ -82,7 +48,6 @@
                 </div>
             </div>
     </main>
-
     <main>
         <h1>The Team.</h1>
         <div class="cards-container">
@@ -104,23 +69,6 @@
 
         </div>
     </main>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <p>&copy; 2024 Retendo Network.<br> Website made by Zacrazali_38 & cedkeChat.</p>
-            </div>
-            <div class="footer-right">
-                <nav>
-                    <ul>
-                        <li><a href="https://discord.gg/QB5YFJfsFJ">Discord</a></li>
-                        <li><a href="https://github.com/RetendoNetwork">Github</a></li>
-                        <li><a href="https://innoverse.club">Innoverse</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </footer>
-    <script src="/js/pages.js"></script>
-</body>
+<script src="/js/pages.js"></script>
 
-</html>
+{{> footer}}
