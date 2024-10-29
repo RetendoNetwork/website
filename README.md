@@ -1,8 +1,8 @@
 # website
 - Official website of Retendo Network
 
-# [!WARNING]
-> The website isn't finished, website can have bug from account service.
+# ⚠️ Warning
+> The website isn't finished, and it may have bugs related to the account service.
 
 # How to use
 ## How to start the server
