@@ -333,6 +333,7 @@ footer {
   }
 }
 
+<<<<<<< HEAD
 .arrow-container {
   width: 0px;
   height: 0px;
@@ -426,6 +427,8 @@ nav li:hover .dropdown-content,
   visibility: visible;
 }
 
+=======
+>>>>>>> e32a569354139d144ff13b828049fe7252d80f04
 /* Webkit scrollbar */
 html::-webkit-scrollbar {
 	width: 12px;
@@ -442,4 +445,8 @@ html::-webkit-scrollbar-thumb {
 html {
 	scrollbar-width: thin;
 	scrollbar-color: #c52a2a var(--bg-shade-1);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e32a569354139d144ff13b828049fe7252d80f04
