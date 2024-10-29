@@ -1,6 +1,6 @@
-const { Schema } = require('mongoose');
+const mongoose = require('mongoose');
 
-const RNIDSchema = new Schema({
+const RNIDSchema = new mongoose.Schema({
 	pid: {
 		type: Number,
 		unique: true

@@ -2,7 +2,7 @@ const express = require('express');
 const handlebars = require('express-handlebars');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
-const database = require('./database');
+const connectDB = require('./database');
 const logger = require('./logger');
 const utils = require('./utils');
 const config = require('../config.json');
@@ -39,8 +39,12 @@ app.use(routes.home);
 app.use(routes.progress);
 app.use(routes.updates);
 
-database.connect().then(() => {
-	app.listen(port, async () => {
-		logger.log(`The was started on http://localhost:${port}`);
-	});
+app.use((req, res) => {
+	const fullUrl = utils.fullUrl(req);
+	res.render('404');
+});
+
+app.listen(port, async () => {
+    connectDB();
+	logger.log(`The was started on http://localhost:${port}`);
 });

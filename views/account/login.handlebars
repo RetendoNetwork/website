@@ -1,13 +1,13 @@
+{{> header}}
+
+<link rel="stylesheet" href="/css/home.css" />
 <link rel="stylesheet" href="/css/account.css" />
 <div class="wrapper">
-    <header>
-        <h1>Login</h1>
-    </header>
     <form class="account register" id="signupForm" action="/account/login" method="POST">
         <div class="input-wrapper">
             <i class="fas fa-user"></i>
             <label for="pseudo">Username</label>
-            <input type="text" id="rnid" name="rnid" required>
+            <input type="text" id="username" name="username" required>
             <span class="error-message" id="pseudoError"></span>
         </div>
         <div class="input-wrapper">

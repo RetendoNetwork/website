@@ -476,7 +476,7 @@ document
             const tokenType = document.cookie.split('; ').find(row => row.startsWith('token_type=')).split('=')[1];
             const accessToken = document.cookie.split('; ').find(row => row.startsWith('access_token=')).split('=')[1];
 
-            fetch('https://api.pretendo.cc/v1/user', {
+            fetch('https://api.retendo.online/v1/user', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',

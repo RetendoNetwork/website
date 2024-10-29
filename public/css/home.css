@@ -23,6 +23,17 @@ body {
   padding-top: 100px;
 }
 
+body, .main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.main-content {
+  flex: 1;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -320,4 +331,115 @@ footer {
   to {
     transform: translateY(100vh);
   }
+}
+
+.arrow-container {
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ec0404;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100%;
+}
+
+nav li {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.dropdown-content {
+  opacity: 0;
+  position: absolute;
+  width: 346px;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 180ms ease, visibility 180ms ease;
+  pointer-events: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 15px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  padding: 10px;
+}
+
+.dropdown-content a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 10px 0;
+  text-decoration: none;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a i {
+  font-size: 20px;
+  color: white;
+  background-color: #8a0d0d;
+  padding: 10px;
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+}
+
+.dropdown-content a span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.dropdown-content a p {
+  font-size: 14px;
+  margin: 3px 0pc;
+  padding: 0px;
+  color: #bbb;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(87, 38, 38);
+  box-shadow: none;
+  color: #ff5555;
+}
+
+nav li:hover .dropdown-content,
+.dropdown-content:hover {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* Webkit scrollbar */
+html::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+html::-webkit-scrollbar-track {
+	background: var(--bg-shade-1);
+}
+html::-webkit-scrollbar-thumb {
+	background-color: c52a2a;
+	border-radius: 24px;
+	border: 3px solid var(--bg-shade-1);
+}
+html {
+	scrollbar-width: thin;
+	scrollbar-color: #c52a2a var(--bg-shade-1);
 }
