@@ -1,7 +1,7 @@
 # website
 - Official website of Retendo Network
 
-# [WARNING]
+# [!WARNING]
 > The website isn't finished, website can have bug from account service.
 
 # How to use
