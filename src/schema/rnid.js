@@ -1,6 +1,7 @@
-const mongoose = require('mongoose');
+const { Schema } = require('mongoose');
 
-const RNIDSchema = new mongoose.Schema({
+const RNIDSchema = new Schema({
+	deleted: Boolean,
 	pid: {
 		type: Number,
 		unique: true
@@ -9,6 +10,9 @@ const RNIDSchema = new mongoose.Schema({
 	access_level: Number,
 	username: String,
 	connections: {
+		discord: {
+			id: String
+		},
 		stripe: {
 			customer_id: String,
 			subscription_id: String,
