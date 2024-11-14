@@ -23,7 +23,7 @@ const logger = {
     },
 
     database: function database (msg) {
-        console.log(`[DATABASE] (${moment().format("HH:mm:ss")}) ${msg}`.cyan);
+        console.log(`[MONGODB] (${moment().format("HH:mm:ss")}) ${msg}`.cyan);
     },
 
     http_log: function http_log(req, res, next) {

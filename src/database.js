@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 const logger = require('./logger');
+const config = require('../config.json');
 
-const uri = 'mongodb://localhost:27017/retendo_account';
+const uri = config.database.account.connection_string;
+const options = config.database.account.options;
 
 const connectDB = async () => {
     try {
