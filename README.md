@@ -6,8 +6,7 @@
 
 # How to use
 ## How to start the server
-- First, Install [NodeJS](https://nodejs.org) and install all packages with `npm install`.
-- And for start the web server, add `npm start` on the cmd.
+- First, Install NodeJS, Docker and Go.
 
 # Credits
 - cedkeChat
