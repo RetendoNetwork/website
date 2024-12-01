@@ -46,5 +46,5 @@ app.use((req, res) => {
 
 app.listen(port, async () => {
     connectDB();
-	logger.log(`The was started on http://localhost:${port}`);
+	logger.log(`The server was listening on http://localhost:${port}`);
 });
