@@ -1,27 +1,42 @@
-FROM golang:1.21-alpine as builder
+# syntax=docker/dockerfile:1
 
-WORKDIR /app
+ARG app_dir="/home/node/app"
 
-COPY main.go .
 
-RUN go mod init app && go mod tidy && go build -o main main.go
+FROM node:20-alpine AS base
+ARG app_dir
+WORKDIR ${app_dir}
 
-FROM node:20-alpine
 
-WORKDIR /app
+FROM base AS dependencies
 
-COPY --from=builder /app/main .
+RUN --mount=type=bind,source=package.json,target=package.json \
+	--mount=type=bind,source=package-lock.json,target=package-lock.json \
+	--mount=type=cache,target=/root/.npm \
+	npm ci --omit=dev
 
-COPY src/server.js ./src/server.js
-COPY config.json ./config.json
-COPY src/ ./src/
-COPY public ./public
-COPY package.json ./
-COPY package-lock.json ./
 
-RUN npm install
+FROM base AS build
 
-EXPOSE 3000
-EXPOSE 8000
+RUN --mount=type=bind,source=package.json,target=package.json \
+	--mount=type=bind,source=package-lock.json,target=package-lock.json \
+	--mount=type=cache,target=/root/.npm \
+	npm ci
 
-CMD ["./main"]
+COPY . .
+
+
+FROM base AS final
+ARG app_dir
+
+RUN mkdir -p ${app_dir}/logs && chown node:node ${app_dir}/logs
+
+ENV NODE_ENV=production
+USER node
+
+COPY package.json .
+
+COPY --from=dependencies ${app_dir}/node_modules ${app_dir}/node_modules
+COPY --from=build ${app_dir} ${app_dir}
+
+CMD ["node", "src/index.js"]
