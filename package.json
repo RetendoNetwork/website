@@ -1,33 +1,32 @@
 {
   "name": "website",
-  "version": "1.0.0",
-  "description": "Official website of Retendo Network.",
-  "main": "src/server.js",
+  "version": "2.0.0",
+  "description": "Retendo Network Official Website.",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js"
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RetendoNetwork/website.git"
   },
   "author": "Retendo Contributors",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RetendoNetwork/website/issues"
+  },
+  "homepage": "https://github.com/RetendoNetwork/website#readme",
   "dependencies": {
-    "@discordjs/rest": "^2.4.0",
     "bcrypt": "^5.1.1",
     "colors": "^1.4.0",
     "cookie-parser": "^1.4.7",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "express-handlebars": "^5.3.1",
-    "fs-extra": "^11.2.0",
-    "got": "^10.7.0",
-    "marked": "^14.1.3",
+    "got": "^11.8.5",
     "mii-js": "github:PretendoNetwork/mii-js#v1.0.4",
     "moment": "^2.30.1",
-    "mongodb": "^6.10.0",
-    "mongoose": "^8.7.2",
+    "mongoose": "^6.4.0",
     "morgan": "^1.10.0"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "eslint": "^9.13.0",
-    "globals": "^15.11.0"
   }
 }
